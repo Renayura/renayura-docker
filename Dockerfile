@@ -10,4 +10,4 @@ RUN chmod 755 /clone3-workaround
 
 SHELL ["/clone3-workaround","/bin/sh", "-c"]
 
-RUN DEBIAN_FRONTEND=noninteractive chmod +x /install_packages.sh && bash /install_packages.sh
+RUN chmod +x /install_packages.sh && bash /install_packages.sh
