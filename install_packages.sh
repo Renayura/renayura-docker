@@ -42,7 +42,7 @@ sudo DEBIAN_FRONTEND=noninteractive \
     maven ncftp ncurses-dev patch patchelf pkg-config pngcrush \
     pngquant python2.7 python-all-dev re2c schedtool squashfs-tools subversion \
     texinfo unzip w3m xsltproc zip zlib1g-dev lzip \
-    libxml-simple-perl libswitch-perl apt-utils \
+    libxml-simple-perl libswitch-perl apt-utils zsh \
     ${PACKAGES} -y
 
 echo -e "Installing GitHub CLI"
@@ -69,3 +69,7 @@ fi
 echo "Installing repo"
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
+
+# zsh
+chsh -s /bin/zsh root
+sh -c "$(curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
